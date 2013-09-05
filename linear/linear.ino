@@ -26,6 +26,8 @@ void loop()
     angle = analogRead(A0) *0.35-180+error ;
     if(angle>180)
     {angle-=360;}
+    else if(angle<-180)
+    {angle+=360;}
     Serial.println(angle);
     delay(100);
   
